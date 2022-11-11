@@ -1,5 +1,6 @@
 import config from '../../config.json';
 import styled from 'styled-components';
+import { style } from '@mui/system';
 
 const StyledHeader = styled.div`
     img {
@@ -9,7 +10,7 @@ const StyledHeader = styled.div`
     }
 
     .user-info {
-        margin-top: 50px;
+        /* margin-top: 50px; */
         display: flex;
         align-items: center;
         width: 100%;
@@ -18,10 +19,18 @@ const StyledHeader = styled.div`
     }
 `;
 
+const StyledBanner = styled.div`
+    background-color: gray;
+    background-image: url(https://images.unsplash.com/photo-1548263594-a71ea65a8598?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
+    height: 350px;
+`
+
 export default function Header() {
     return (
         <StyledHeader>
-            {/* <img src="banner" alt="banner" /> */}
+            <StyledBanner>
+
+            </StyledBanner>
 
             <section className='user-info'>
                 <img src={`https://github.com/${config.github}.png`} alt="" />

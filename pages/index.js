@@ -1,3 +1,5 @@
+import React from "react";
+
 import Header from "../src/components/Header";
 import Timeline from "../src/components/Timeline/Timeline";
 
@@ -6,6 +8,9 @@ import { CSSReset } from "../src/css/CSSReset";
 import Menu from "../src/components/Menu";
 
 function HomePage() {
+
+    const [valorDoFiltro, setValorDoFiltro] = React.useState("Angular");
+    
     return (
         <div>
 
@@ -14,9 +19,9 @@ function HomePage() {
             <div
                 style={{ display: "flex", flexDirection: "column", flex: 1 }}
             >
-                <Menu />
+                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
                 <Header />
-                <Timeline playlists={config.playlists} />
+                <Timeline searchValue={valorDoFiltro} playlists={config.playlists} />
             </div>
         </div>
     )

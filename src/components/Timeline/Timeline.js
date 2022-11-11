@@ -1,11 +1,7 @@
 import { StyledTimeline } from "./TimelineCSS";
 
-export default function Timeline(props) {
-    console.log(props.playlists)
+export default function Timeline({searchValue, ...props}) {
     const playlistNames = Object.keys(props.playlists)
-
-
-    // statement e retorno por expressão
 
     return (
         <StyledTimeline>
@@ -13,13 +9,18 @@ export default function Timeline(props) {
                 const videos = props.playlists[playlistNames];
                 
                 return (
-                    <section>
+                    <section key={playlistNames}>
                         <h2>{playlistNames}</h2>
 
                         <div>
-                            {videos.map((video) => {
+                            {videos.filter((video) => {
+                                const titleNormalized = video.title.toLowerCase();
+                                const searchValueNormalized = searchValue.toLowerCase();
+                                
+                                return titleNormalized.includes(searchValueNormalized)
+                            }).map((video) => {
                                 return (
-                                    <a href={video.url}>
+                                    <a key={video.url} href={video.url}>
                                         <img src={video.thumb} />
 
                                         <span>
