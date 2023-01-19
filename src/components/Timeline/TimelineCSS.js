@@ -25,6 +25,7 @@ export const StyledTimeline = styled.div`
 		width: 100%;
 		padding: 0;
 		overflow: hidden;
+		
 		padding: 16px;
 		
 		div {
@@ -36,6 +37,9 @@ export const StyledTimeline = styled.div`
 			grid-auto-columns: minmax(200px,1fr);
 			overflow-x: scroll;
 			scroll-snap-type: x mandatory;
+			::-webkit-scrollbar {
+  				display: none;
+			}
 
 			a {
 				scroll-snap-align: start;

@@ -1,8 +1,9 @@
 import config from '../../config.json';
 import styled from 'styled-components';
-import { style } from '@mui/system';
 
 const StyledHeader = styled.div`
+    background-color: ${({ theme })=> theme.backgroundLevel1};
+
     img {
         width: 80px;
         height: 80px;
@@ -23,6 +24,7 @@ const StyledBanner = styled.div`
     background-color: gray;
     background-image: url(https://images.unsplash.com/photo-1548263594-a71ea65a8598?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80);
     height: 350px;
+    background-size: cover;
 `
 
 export default function Header() {
@@ -41,7 +43,7 @@ export default function Header() {
                     </h2>
 
                     <p>
-                        {config.job}
+                        {config.description}
                     </p>
                 </div>
             </section>

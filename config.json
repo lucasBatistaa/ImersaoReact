@@ -1,7 +1,7 @@
 {
-    "name": "Mario Souto (DevSoutinho)",
-    "description": "Lead Software Engineer",
-    "github": "omariosouto",
+    "name": "Lucas Batista",
+    "description": "Desenvolvedor Front-end",
+    "github": "lucasbatistaa",
     "playlists": {
         "jogos": [
             {
@@ -129,5 +129,8 @@
                 "thumb": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
             }
         ]
-    }
+    },
+    "favorites": [
+        "peas", "omariosouto"
+    ]
 }
