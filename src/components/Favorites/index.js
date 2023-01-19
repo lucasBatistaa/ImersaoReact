@@ -29,7 +29,7 @@ function useForm(propsDoForm) {
 }
 
 export default function Favorites({ ...props }) {
-    const aluratubers = props.favorites
+    const aluratubers = config.favorites
 
     const [formVisivel, setFormVisivel] = React.useState(false)
     const formCadastro = useForm({ initialValues: { username: ""} })
